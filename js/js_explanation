@@ -1,0 +1,13 @@
+
+
+// In this code:
+
+// *The flipCard function handles the logic for flipping cards and checking for matches.
+// *The checkForMatch function compares the data-framework attributes of the two flipped cards.
+// *The disableCards function removes event listeners from matched cards.
+// *The unflipCards function flips back unmatched cards after a delay.
+// *The resetBoard function resets the game state variables.
+// *An IIFE (Immediately Invoked Function Expression) shuffle shuffles the cards' positions.
+// *Event listeners are added to each card to handle the click event.
+// *The resetGame function resets the entire game, flipping back all cards, re-enabling event listeners, reshuffling the cards, and resetting the board state.
+// *An event listener is added to the reset button to trigger the resetGame function.
