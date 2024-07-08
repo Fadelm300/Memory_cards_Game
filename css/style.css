@@ -77,7 +77,7 @@ a 3D space according to any transform properties applied to them */
 
 /* shake the card  
 /* from gogle */
-
+/* 
 .card.shake{
     animation: shake 0.35s ease-in-out;
 }
@@ -97,7 +97,7 @@ a 3D space according to any transform properties applied to them */
     80%{
         transform: translateX(8px);
     }
-}
+} */
 
 .cards .card .view{
     width: 100%;
@@ -107,6 +107,7 @@ a 3D space according to any transform properties applied to them */
     position:re;
     background: #fff;
     border-radius: 7px;
+
     backface-visibility: hidden;
     transition: transform 0.25s linear;
     box-shadow: 0 3px 10px rgba(0,0,0,0.1);
