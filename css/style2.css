@@ -19,9 +19,13 @@
 
 
 body {
-  height: 109vh;
+  height: 110vh;
   background-image: linear-gradient(to right top, #9331e0, #793fd9, #6147d1, #4a4cc6, #354eb9, #1f5fc2, #056ec8, #007dcc, #009ee1, #00bfed, #00def1, #5ffbf1);
+/* background-size: cover;
+background-position: center; */
   display: flex;
+flex-direction: column;
+
   /* overflow: hidden; */
 
 }
@@ -184,6 +188,21 @@ if it was position will be reletiv to it
   .card .back-card {
       font-size: 35px;
   }
+  .details button:hover{
+    color: #ffffffbe;
+    background: #673AB7;
+  }
+  .details button{
+    cursor: pointer;
+    font-size: 5px;
+    color: #673AB7;
+    border-radius: 4px;
+    padding: 3px 8px;
+    background: #fff;
+    border: 2px solid #673AB7;
+    transition: 0.3s ease;
+  }
+  
 }
 
 @media screen and (max-width: 530px) {
@@ -245,3 +264,62 @@ I didn't add it to js*/
   }
 } */
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* //footer */
+
+footer{
+
+  width: 200px;
+  height: 200px;
+  margin: auto;
+  display: flex;
+justify-content: center;
+
+padding: 10px;
+}
+
+.F_content{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+gap: 30px;
+padding-top: 50px;
+}
+.null{
+  background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+
+}
