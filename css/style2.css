@@ -1,0 +1,28 @@
+
+
+/* steps
+1- * 
+2- body we need to fix the heigt we planing to use and the footer also in the body
+3-fix the contaner 
+4-fix the cards contaner 
+5-fix the front and back for each card 
+6-add 3d transform and edit the speed
+
+*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+
+body {
+  height: 109vh;
+  background-image: linear-gradient(to right top, #9331e0, #793fd9, #6147d1, #4a4cc6, #354eb9, #1f5fc2, #056ec8, #007dcc, #009ee1, #00bfed, #00def1, #5ffbf1);
+  display: flex;
+  /* overflow: hidden; */
+
+}
