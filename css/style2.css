@@ -70,3 +70,40 @@ if it was position will be reletiv to it
   width: calc(25% - 10px);
   height: calc(30% - 10px); 
 }
+
+
+
+
+
+/* transform: scale(0.7); */
+/* Click Effect to the card  will be active winever get Click */
+/* transform scale 0.7 of the oreginal  */
+
+/* transition: transform 0.4s; */
+/* make it bit smoother by applying transition to it */
+
+.card:active {
+  transform: scale(0.7);
+  transition: transform 0.4s;
+}
+
+.card.flip {
+  transform:rotateY(180deg) ;
+}
+
+.front-card  , .back-card
+  {
+  width: 100%; 
+  height: 100%;
+  padding: 0px;
+  position: absolute;
+  backface-visibility: hidden;
+  }
+
+.front-card {
+  transform: rotateY(180deg);
+
+}
+
+/* rotateY if we use rotate without y will not work and will rotate the card in 2d  */
+
