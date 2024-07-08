@@ -38,3 +38,18 @@ justify-content: center;
     margin: auto;
     }
     
+
+    
+.cards {
+  width: 99vh;
+  height: 99vh;
+  margin: auto;
+/* we  */
+  display: flex;
+  flex-wrap: wrap;
+  /* for 3D && transform-style 3d for the card you  flip it  */
+  /* will insert memory card element insid the 3d the 3d space    */
+  /* otherwise will be in 2d and will be flat in the 2d   */
+  perspective: 1000px;
+}
+
