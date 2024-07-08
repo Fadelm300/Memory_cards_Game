@@ -26,3 +26,15 @@ body {
   /* overflow: hidden; */
 
 }
+
+/* another way to fix the contaner  */
+/* .contaner{
+  display: flex;
+  flex-direction: column;
+justify-content: center;
+  } */
+
+  .contaner{
+    margin: auto;
+    }
+    
