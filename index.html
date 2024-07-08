@@ -1,193 +1,86 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/css/style.css">
-    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <title>memory_cards</title>
+    <link rel="stylesheet" href="/css/style2.css">
+    
     <script defer src="/js/Script.js"></script></head>
-<body>
+    <body>
+        <div class="contaner ">
+        <div class="cards">
+                <div class="card" data-framework="front1" >
+                        <img class="front-card" src="/img/front1.png" class="front1" />
+                        <img class="back-card" src="/img/back-view3.png"  />
+                </div>
+                <div class="card" data-framework="front2" >
+                        <img class="front-card" src="/img/front2.png" class="front2" />
+                        <img class="back-card" src="/img/back-view3.png"  />
+                </div>
+      
+          <div class="card"data-framework="front3" >
+                      <img class="front-card" src="/img/front3.png" class="front3" />
+                      <img class="back-card" src="/img/back-view3.png" />
+          </div>
+          <div class="card"data-framework="front4" >
+                      <img class="front-card" src="/img/front4.png" class="front4" />
+                      <img class="back-card" src="/img/back-view3.png"  />
+          </div>
+      
+          <div class="card"data-framework="front5" >
+                         <img class="front-card" src="/img/front5.png" class="front5"  />
+                          <img class="back-card" src="/img/back-view3.png"  />
+          </div>
+          <div class="card"data-framework="front6" >
+                          <img class="front-card" src="/img/front6.png"  class="front6" />
+                         <img class="back-card" src="/img/back-view3.png"  />
+          </div>
+      
+          <div class="card" data-framework="front1">
+                         <img class="front-card" src="/img/front1.png"  class="front1" />
+                        <img class="back-card" src="/img/back-view3.png"  />
+          </div>
+          <div class="card" data-framework="front2">
+                        <img class="front-card" src="/img/front2.png"  class="front2" />
+                         <img class="back-card" src="/img/back-view3.png"  />
+          </div>
+      
+          <div class="card" data-framework="front3">
+                         <img class="front-card" src="/img/front3.png" class="front3"  />
+                         <img class="back-card" src="/img/back-view3.png" />
+          </div>
+          <div class="card" data-framework="front4">
+                         <img class="front-card" src="/img/front4.png" class="front4"  />
+                        <img class="back-card" src="/img/back-view3.png"  />
+          </div>
+      
+          <div class="card" data-framework="front5">
+                         <img class="front-card" src="/img/front5.png"  class="front5"/>
+                         <img class="back-card" src="/img/back-view3.png"  />
+          </div>
+          <div class="card" data-framework="front6">
+                         <img class="front-card" src="/img/front6.png" class="front6" />
+                         <img class="back-card" src="/img/back-view3.png"  />
+          </div>
+      
+        </div>
+        <!-- 
+The data-framework attribute in your HTML code is set to "front6".
+ This attribute is typically used to specify a framework or
+  a library that the card or element is associated with. -->
+       
+     
 
+ <div class="details">
+            <p class="time">Time : <span><b>0</b>s</span></p>
+            <p class="flips">Flips : <span><b>0</b></span></p>
+            
+            <button id="Reset" class="Reset-btn">Reset</button>
 
-    <div class="wrapper">
-            <ul class="cards">
-                <!-- card 1  -->
-                <li class="card">
-                    <div class="view front_p">
-                        <!-- icon for the front  -->
-                         <img src="/img/back-view3.png" alt="">
-                    </div>
-                    <div class="view back_p">
-                        <!-- icon for the front  -->
-                        <img src="/img/front1.png" alt="">
-
-                    </div>
-                    
-                </li>
-                <!--  card 2-->
-                <li class="card">
-                    <div class="view front_p">
-                        <!-- icon for the front  -->
-                         <img src="/img/back-view3.png" alt="">
-                    </div>
-                    <div class="view back_p">
-                        <!-- icon for the front  -->
-                        <img src="/img/front2.png" alt="">
-
-                    </div>
-                    
-                </li>
-                <!-- card 3  -->
-                <li class="card">
-                    <div class="view front_p">
-                        <!-- icon for the front  -->
-                         <img src="/img/back-view3.png" alt="">
-                    </div>
-                    <div class="view back_p">
-                        <!-- icon for the front  -->
-                        <img src="/img/front3.png" alt="">
-
-                    </div>
-                    
-                </li>
-                <!-- card 4  -->
-                <li class="card">
-                    <div class="view front_p">
-                        <!-- icon for the front  -->
-                         <img src="/img/back-view3.png" alt="">
-                    </div>
-                    <div class="view back_p">
-                        <!-- icon for the front  -->
-                        <img src="/img/front4.png" alt="">
-
-                    </div>
-                    
-                </li>
-                <!-- card 5 -->
-                <li class="card">
-                    <div class="view front_p">
-                        <!-- icon for the front  -->
-                         <img src="/img/back-view3.png" alt="">
-                    </div>
-                    <div class="view back_p">
-                        <!-- icon for the front  -->
-                        <img src="/img/front5.png" alt="">
-
-                    </div>
-                    
-                </li>
-                <!-- card 6 -->
-                <li class="card">
-                    <div class="view front_p">
-                        <!-- icon for the front  -->
-                         <img src="/img/back-view3.png" alt="">
-                    </div>
-                    <div class="view back_p">
-                        <!-- icon for the front  -->
-                        <img src="/img/front6.png" alt="">
-
-                    </div>
-                    
-                </li>
-
-
-
-
-
-                <!-- ///////////////////////////// -->
-
-
-
-
-                      <!-- card 1  -->
-                      <li class="card">
-                        <div class="view front_p">
-                            <!-- icon for the front  -->
-                             <img src="/img/back-view3.png" alt="">
-                        </div>
-                        <div class="view back_p">
-                            <!-- icon for the front  -->
-                            <img src="/img/front1.png" alt="">
-    
-                        </div>
-                        
-                    </li>
-                    <!--  card 2-->
-                    <li class="card">
-                        <div class="view front_p">
-                            <!-- icon for the front  -->
-                             <img src="/img/back-view3.png" alt="">
-                        </div>
-                        <div class="view back_p">
-                            <!-- icon for the front  -->
-                            <img src="/img/front2.png" alt="">
-    
-                        </div>
-                        
-                    </li>
-                    <!-- card 3  -->
-                    <li class="card">
-                        <div class="view front_p">
-                            <!-- icon for the front  -->
-                             <img src="/img/back-view3.png" alt="">
-                        </div>
-                        <div class="view back_p">
-                            <!-- icon for the front  -->
-                            <img src="/img/front3.png" alt="">
-    
-                        </div>
-                        
-                    </li>
-                    <!-- card 4  -->
-                    <li class="card">
-                        <div class="view front_p">
-                            <!-- icon for the front  -->
-                             <img src="/img/back-view3.png" alt="">
-                        </div>
-                        <div class="view back_p">
-                            <!-- icon for the front  -->
-                            <img src="/img/front4.png" alt="">
-    
-                        </div>
-                        
-                    </li>
-                    <!-- card 5 -->
-                    <li class="card">
-                        <div class="view front_p">
-                            <!-- icon for the front  -->
-                             <img src="/img/back-view3.png" alt="">
-                        </div>
-                        <div class="view back_p">
-                            <!-- icon for the front  -->
-                            <img src="/img/front5.png" alt="">
-    
-                        </div>
-                        
-                    </li>
-                    <!-- card 6 -->
-                    <li class="card">
-                        <div class="view front_p">
-                            <!-- icon for the front  -->
-                             <img src="/img/back-view3.png" alt="">
-                        </div>
-                        <div class="view back_p">
-                            <!-- icon for the front  -->
-                            <img src="/img/front6.png" alt="">
-    
-                        </div>
-                        
-                    </li>
-
-            </ul>
-
-              <div class="details">
-        <p class="timar">Time : <span>0</span></p>
-        <p class="flips">Flip : <span>0</span></p>
-        <button>Refresh</button>
-    </div>
-    </div>
-  
-    
-</body>
-</html>
+        </div>
+ <!-- end of the contaner -->
+</div>
+      </body>
+</html
