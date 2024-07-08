@@ -52,4 +52,21 @@ justify-content: center;
   /* otherwise will be in 2d and will be flat in the 2d   */
   perspective: 1000px;
 }
+/*   position: relative;
+beacus we wont to fix the place for the cards we nedd to use   position: relative;
+and   position: absolute; 
+its like the element ask the perent box if thay are positiond box untell thay find the one is position
+if it was position will be reletiv to it 
+*/
+.card {
 
+  margin: 5px;
+  position: relative;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform .5s;
+  /*becaus the margen we have overflow on card so we need to calculat the width and height    */
+  /* -_- */
+  width: calc(25% - 10px);
+  height: calc(30% - 10px); 
+}
