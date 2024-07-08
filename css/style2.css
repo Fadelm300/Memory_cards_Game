@@ -15,18 +15,20 @@
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
 
+
+  
 }
 
 
 body {
-  height: 110vh;
+  height: 100vh;
   background-image: linear-gradient(to right top, #9331e0, #793fd9, #6147d1, #4a4cc6, #354eb9, #1f5fc2, #056ec8, #007dcc, #009ee1, #00bfed, #00def1, #5ffbf1);
 /* background-size: cover;
 background-position: center; */
   display: flex;
 flex-direction: column;
 
-  /* overflow: hidden; */
+  overflow: hidden;
 
 }
 /* another way to fix the contaner  */
@@ -41,16 +43,18 @@ margin: auto;
 }
 
 .cards {
-  width: 99vh;
-  height: 99vh;
+  width: 80vh;
+  height: 80vh;
   margin: auto;
 /* we  */
   display: flex;
   flex-wrap: wrap;
+  padding: 20px;
   /* for 3D && transform-style 3d for the card you  flip it  */
   /* will insert memory card element insid the 3d the 3d space    */
   /* otherwise will be in 2d and will be flat in the 2d   */
   perspective: 1000px;
+
 }
 /*   position: relative;
 beacus we wont to fix the place for the cards we nedd to use   position: relative;
@@ -141,11 +145,11 @@ if it was position will be reletiv to it
 
 /* button style  */
 
-.details button:hover{
+ button:hover{
   color: #ffffffbe;
   background: #673AB7;
 }
-.details button{
+ button{
   cursor: pointer;
   font-size: 20px;
   color: #673AB7;
@@ -271,28 +275,6 @@ I didn't add it to js*/
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* //footer */
 
 footer{
@@ -311,7 +293,7 @@ padding: 10px;
   justify-content: center;
   flex-direction: row;
 gap: 30px;
-padding-top: 50px;
+padding-top: 0px;
 }
 .null{
   background: none;
@@ -322,4 +304,63 @@ padding-top: 50px;
 	cursor: pointer;
 	outline: inherit;
 
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Modal styles */
+.modal {
+  display: none;
+  position: fixed;
+
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.4); /* Black with opacity */
+}
+.modal-content {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  text-align: center;
+  background-color: #73cded;
+  
+  margin: auto;
+  padding: 20px;
+  
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  max-width: 500px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: start;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
