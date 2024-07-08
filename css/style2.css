@@ -164,3 +164,85 @@ if it was position will be reletiv to it
 .card .back-card {
     font-size: 35px;
 } */
+
+
+
+
+/*  not 100% good need to be fixed  */
+/* media query */
+
+@media screen and (max-width: 700px) {
+  .cards{
+    width: 60vh;
+    height: 60vh;
+    margin: auto;
+  }
+  .card .front-card {
+      font-size: 35px;
+  }
+  .card .back-card {
+      font-size: 35px;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .cards{
+      height: 300px;
+      width: 300px;
+  }
+  .cards .back-card {
+      font-size: 30px;
+  }
+  .details{
+      margin-top: 10px;
+      padding: 0 15px;
+      height: calc(100% / 4 - 20px);
+  }
+
+  .details p{
+      height: 15px;
+      font-size: 17px;
+      padding-right: 13px;
+  }
+
+  .details button{
+      font-size: 13px;
+      padding: 5px 10px;
+      border: none;
+      color: #fff;
+      background: #f1f0f2;
+  }
+  
+}
+
+
+
+
+
+/* .shake : we can use it to till the (user) the cards different 
+I didn't add it to js*/
+/* 
+.card.shake{
+  animation: shake 0.35s ease-in-out;
+}
+
+@keyframes shake{
+  0%, 100%{
+      transform: translateX(0);
+  }
+  20%{
+      transform: translateX(-10px);
+  }
+  40%{
+      transform: translateX(10px);
+  }
+  60%{
+      transform: translateX(-5px);
+  }
+  80%{
+      transform: translateX(5px);
+  }
+} */
+
+
+
