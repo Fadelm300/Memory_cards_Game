@@ -107,3 +107,60 @@ if it was position will be reletiv to it
 
 /* rotateY if we use rotate without y will not work and will rotate the card in 2d  */
 
+
+/* footer */
+.details{
+
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+  gap: 20px;
+}
+
+
+
+.details p{
+  font-size: 30px;
+  height: 17px;
+  padding-right: 18px;
+  border-right: 1px solid #ccc;
+}
+.details p span{
+  margin-left: 8px;
+}
+
+.details p b{
+  font-weight: 500;
+}
+
+
+
+/* button style  */
+
+.details button:hover{
+  color: #ffffffbe;
+  background: #673AB7;
+}
+.details button{
+  cursor: pointer;
+  font-size: 20px;
+  color: #673AB7;
+  border-radius: 4px;
+  padding: 3px 8px;
+  background: #fff;
+  border: 2px solid #673AB7;
+  transition: 0.3s ease;
+}
+
+
+/* .cards{
+  width: 60vh;
+  height: 60vh;
+  margin: auto;
+}
+.card .front-card {
+    font-size: 35px;
+}
+.card .back-card {
+    font-size: 35px;
+} */
