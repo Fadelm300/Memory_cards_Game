@@ -9,6 +9,8 @@ let second_Card; // Stores the second flipped card
 let flipCount = 0; // Count the number of flips
 let startTime; // Track the start time of the game
 let timerInterval; // Store the setInterval for the timer
+let matchedPairs = 0; // Track the number of matched pairs
+const totalPairs = cards.length / 2; // Total number of pairs
 
 // Declare the flipCard function
 function flipCard() {
@@ -32,12 +34,20 @@ function flipCard() {
 // This function checks if the cards match using the data-framework from the HTML and flips the cards back if not
 function checkForMatch() {
   let cardMatch = first_Card.dataset.framework === second_Card.dataset.framework; // Compare data-framework attributes
-  cardMatch ? disableCards() : unflipCards(); // Disable cards if they match, otherwise unflip them
+  if (cardMatch) {
+    disableCards(); // Disable cards if they match
+  } else {
+    unflipCards(); // Otherwise, unflip them
+  }
 }
 
 function disableCards() {
   first_Card.removeEventListener('click', flipCard); // Remove click event listener from the first card
   second_Card.removeEventListener('click', flipCard); // Remove click event listener from the second card
+  matchedPairs++; // Increment the matched pairs count
+  if (matchedPairs === totalPairs) {
+    stopTimer(); // Stop the timer if all pairs are matched
+  }
   resetBoard(); // Reset the board state
 }
 
@@ -82,9 +92,10 @@ function resetGame() {
 
   // Reset flip count and timer
   resetFlipCount();
-  resetTimer()
+  resetTimer();
 
-  
+  // Reset matched pairs count
+  matchedPairs = 0;  
 }
 
 // Add event listener to the reset button
@@ -107,14 +118,17 @@ function startTimer() {
   }, 1000); // Update the timer every second
 }
 
-// Function to reset the flip count
-//gpt help *_-
+// Function to stop the timer
+function stopTimer() {
+  clearInterval(timerInterval); // Stop the timer
+  timerInterval = null;
+}
 
+// Function to reset the flip count
 function resetFlipCount() {
   flipCount = 0;
   document.querySelector('.flips span b').textContent = flipCount;
-  console.log("resetFlipCount work")
-
+  console.log("resetFlipCount work");
 }
 
 // Function to reset the timer
@@ -122,5 +136,5 @@ function resetTimer() {
   clearInterval(timerInterval); // Stop the timer
   startTime = null;
   document.querySelector('.time span b').textContent = '0';
-  console.log("resetTimer work")
+  console.log("resetTimer work");
 }
