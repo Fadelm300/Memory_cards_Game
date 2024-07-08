@@ -143,6 +143,7 @@ function resetTimer() {
   document.querySelector('.time span b').textContent = '0';
 }
 
+//some help from GPT  
 // Function to show the modal
 function showModal() {
   modal.style.display = "block";
