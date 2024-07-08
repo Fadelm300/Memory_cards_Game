@@ -47,3 +47,32 @@ ul{
 }
 
 
+.cards{
+
+    flex-wrap: wrap;
+    justify-content:space-between ;
+}
+
+/* will have pointer for the img and the hit is fix */
+
+/* -->transform-style is set to preserve-3d, it means that the children of the element will be positioned in 
+a 3D space according to any transform properties applied to them */
+
+/*-->   Definition: This property sets the height of the element.
+ Effect: The calc() function allows you to perform calculations to
+ determine the value of a property. Here, it calculates the height as 
+ one-fourth of the containing element's height (100%/4), minus 10 pixels.
+  This means that the element will be slightly less 
+ than one-fourth of the height of its parent element. */
+
+.cards .card{
+    cursor: pointer;
+    position: relative;
+    perspective: 1000px;
+     transform-style: preserve-3d;
+    height: calc(100%/4 - 10px);
+    width: calc(100%/4 - 10px); 
+} 
+
+
+
