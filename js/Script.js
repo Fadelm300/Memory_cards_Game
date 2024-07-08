@@ -98,6 +98,7 @@ function resetGame() {
   matchedPairs = 0;  
 }
 
+
 // Add event listener to the reset button
 document.getElementById('Reset').addEventListener('click', resetGame); // Attach resetGame function to the click event of the reset button
 
