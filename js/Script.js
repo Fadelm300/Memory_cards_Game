@@ -1,4 +1,3 @@
-
 // Get all card elements
 const cards = document.querySelectorAll('.card');
 
@@ -7,6 +6,9 @@ let Flipped = false; // Indicates if a card has been flipped
 let lockBoard = false; // Prevents further flipping of cards when true
 let first_Card; // Stores the first flipped card
 let second_Card; // Stores the second flipped card
+let flipCount = 0; // Count the number of flips
+let startTime; // Track the start time of the game
+let timerInterval; // Store the setInterval for the timer
 
 // Declare the flipCard function
 function flipCard() {
@@ -14,10 +16,12 @@ function flipCard() {
   if (this === first_Card) return; // Exit if the same card is clicked again
 
   this.classList.add('flip'); // Add 'flip' class to the clicked card
+  incrementFlipCount(); // Increment the flip count
 
   if (!Flipped) {
     Flipped = true; // Set Flipped to true if it's the first card
     first_Card = this; // Store the first flipped card
+    startTimer(); // Start the timer on the first flip
     return;
   }
 
@@ -52,12 +56,12 @@ function resetBoard() {
 }
 
 // Shuffle the cards
-(function shuffle() {
+function shuffle() {
   cards.forEach(card => {
     let randomPos = Math.floor(Math.random() * 12); // Generate a random position
     card.style.order = randomPos; // Assign the card a random order
   });
-})();
+};
 
 // Add event listener to each card
 cards.forEach(card => card.addEventListener('click', flipCard)); // Attach flipCard function to the click event of each card
@@ -72,13 +76,51 @@ function resetGame() {
 
   // Shuffle the cards again
   shuffle();
-
+  
   // Reset the board state
   resetBoard();
+
+  // Reset flip count and timer
+  resetFlipCount();
+  resetTimer()
+
+  
 }
 
 // Add event listener to the reset button
 document.getElementById('Reset').addEventListener('click', resetGame); // Attach resetGame function to the click event of the reset button
 
+// Function to increment the flip count and update the HTML
+function incrementFlipCount() {
+  flipCount++;
+  document.querySelector('.flips span b').textContent = flipCount;
+}
 
+// Function to start the timer
+function startTimer() {
+  if (startTime) return; // Timer already started
+  startTime = Date.now();
 
+  timerInterval = setInterval(() => {
+    const elapsedTime = Math.floor((Date.now() - startTime) / 1000); // Calculate elapsed time in seconds
+    document.querySelector('.time span b').textContent = elapsedTime;
+  }, 1000); // Update the timer every second
+}
+
+// Function to reset the flip count
+//gpt help *_-
+
+function resetFlipCount() {
+  flipCount = 0;
+  document.querySelector('.flips span b').textContent = flipCount;
+  console.log("resetFlipCount work")
+
+}
+
+// Function to reset the timer
+function resetTimer() {
+  clearInterval(timerInterval); // Stop the timer
+  startTime = null;
+  document.querySelector('.time span b').textContent = '0';
+  console.log("resetTimer work")
+}
