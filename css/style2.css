@@ -194,12 +194,12 @@ if it was position will be reletiv to it
   }
   .details button:hover{
     color: #ffffffbe;
-    background: #673AB7;
+    background: #3ab749;
   }
   .details button{
     cursor: pointer;
-    font-size: 5px;
-    color: #673AB7;
+    font-size: 20px;
+    color: #a4b73a;
     border-radius: 4px;
     padding: 3px 8px;
     background: #fff;
