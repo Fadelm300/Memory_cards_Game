@@ -5,6 +5,8 @@
  [memory card match](https://www.petercollingridge.co.uk/blog/mathematics-toys-and-games/memory-game/) 
 The game contains one player or more each player will flip two cards and that will try to match the cards, and the one who will match the most will win , also if it was one player he needs to match the cards all before the time finish  .
 
+## Date: 10/7/2024
+### BY : Fadel Mohammad 
 
 ## user story 
 
@@ -54,4 +56,18 @@ The game contains one player or more each player will flip two cards and that wi
 * also the player will find information about the developer  
 
 
+
+
+## Attributions:
+...
+
+## Technologies Used:
+* HTML
+* CSS
+* JavaScript
+## Next steps:
+1. Add multiplayer functionality
+2. Improve visual and sound effects
+3. Implement difficulty levels
+4. Add a score tracking system
 
