@@ -197,6 +197,8 @@ if it was position will be reletiv to it
     background: #673AB7;
   }
   .details button{
+  
+
     height: 40px;
     cursor: pointer;
     font-size: 20px;
@@ -231,7 +233,7 @@ if it was position will be reletiv to it
   }
 
   .details button{
-    height: 30px;
+    height: 25px;
       font-size: 13px;
       padding: 5px 10px;
       border: none;
