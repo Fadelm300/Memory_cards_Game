@@ -197,8 +197,15 @@ if it was position will be reletiv to it
     background: #673AB7;
   }
   .details button{
-    height: 25px;
-
+    height: 40px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #673AB7;
+    border-radius: 4px;
+    padding: 3px 8px;
+    background: #fff;
+    border: 2px solid #673AB7;
+    transition: 0.3s ease;
   }
   
 }
@@ -224,7 +231,7 @@ if it was position will be reletiv to it
   }
 
   .details button{
-    height: 25px;
+    height: 30px;
       font-size: 13px;
       padding: 5px 10px;
       border: none;
