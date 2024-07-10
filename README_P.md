@@ -60,7 +60,7 @@ The game contains one player or more each player will flip two cards and that wi
 
 ## Attributions:
 ...
-
+....
 ## Technologies Used:
 * HTML
 * CSS
