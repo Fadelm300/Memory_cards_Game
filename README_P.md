@@ -59,8 +59,30 @@ The game contains one player or more each player will flip two cards and that wi
 
 
 ## Attributions:
-...
-....
+1. [geeksforgeeks ](https://www.geeksforgeeks.org/design-a-flip-card-effect-using-reactjs/)
+
+2. [boxicons](https://boxicons.com/)
+
+3. [Cards](http://www.freestockphotos.biz/stockphoto/15686)
+
+4. [Memory Game rules](https://www.petercollingridge.co.uk/blog/mathematics-toys-and-games/memory-game/)
+
+4.  [youtube-1](https://www.youtube.com/watch?v=xWdkt6KSirw)
+
+5. [youtube-2](https://www.youtube.com/watch?v=bOjgOOmPGTA) 
+
+6. [youtube-3](https://www.youtube.com/watch?v=bbb9dZotsOc) 
+
+7. [github](https://github.com/topics/memory-card-game)
+
+8. [chatgpt](https://chatgpt.com/) 
+
+9. [mdn](https://developer.mozilla.org/en-US/) 
+
+
+
+
+
 ## Technologies Used:
 * HTML
 * CSS
