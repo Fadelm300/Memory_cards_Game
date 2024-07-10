@@ -177,6 +177,8 @@ if it was position will be reletiv to it
 
 
 
+
+
 /*  not 100% good need to be fixed  */
 /* media query */
 
@@ -197,11 +199,10 @@ if it was position will be reletiv to it
     background: #673AB7;
   }
   .details button{
-  
-
     height: 40px;
+
     cursor: pointer;
-    font-size: 20px;
+    font-size: 25px;
     color: #673AB7;
     border-radius: 4px;
     padding: 3px 8px;
@@ -234,7 +235,7 @@ if it was position will be reletiv to it
 
   .details button{
     height: 25px;
-      font-size: 13px;
+      font-size: 5px;
       padding: 5px 10px;
       border: none;
       color: #fff;
@@ -242,7 +243,6 @@ if it was position will be reletiv to it
   }
   
 }
-
 
 
 
