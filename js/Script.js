@@ -7,10 +7,11 @@ let Prevents_flipping = false; // Prevents further flipping of cards when true
 let first_Card; // Stores the first flipped card
 let second_Card; // Stores the second flipped card
 let flipCount = 0; // Count the number of flips
-let startTime; // Track the start time of the game
 let timerInterval; // Store the setInterval for the timer
 let matchedPairs = 0; // Track the number of matched pairs
 const totalPairs = cards.length / 2; // Total number of pairs
+const initialTime = 60; // Initial countdown time
+let timeLeft = initialTime; // Time left for the countdown
 
 // Modal elements
 const modal = document.getElementById('winModal');
@@ -49,10 +50,12 @@ function checkForMatch() {
 function disableCards() {
   first_Card.removeEventListener('click', flipCard); // Remove click event listener from the first card
   second_Card.removeEventListener('click', flipCard); // Remove click event listener from the second card
+  
   matchedPairs++; // Increment the matched pairs count
+  
   if (matchedPairs === totalPairs) {
-    stopTimer(); // Stop the timer if all pairs are matched
-    showModal(); // Show the modal
+    stopTimer();
+    showModal("Congratulations! You've matched all pairs."); // Show the modal with a message
   }
   resetBoard(); // Reset the board state
 }
@@ -67,8 +70,11 @@ function unflipCards() {
 }
 
 function resetBoard() {
+
   [flipped, Prevents_flipping] = [false, false]; // Reset flipped and Prevents_flipping variables
+
   [first_Card, second_Card] = [null, null]; // Reset first_Card and second_Card variables
+
 }
 
 // Shuffle the cards
@@ -77,7 +83,7 @@ function shuffle() {
     let randomPos = Math.floor(Math.random() * 12); // Generate a random position
     card.style.order = randomPos; // Assign the card a random order
   });
-};
+}
 
 // Add event listener to each card
 cards.forEach(card => card.addEventListener('click', flipCard)); // Attach flipCard function to the click event of each card
@@ -101,7 +107,7 @@ function resetGame() {
   resetTimer();
 
   // Reset matched pairs count
-  matchedPairs = 0;  
+  matchedPairs = 0;
 }
 
 // Add event listener to the reset button
@@ -115,12 +121,20 @@ function incrementFlipCount() {
 
 // Function to start the timer
 function startTimer() {
-  if (startTime) return; // Timer already started
-  startTime = Date.now();
+  if (timerInterval) return; // Timer already started
+  timeLeft = initialTime; // Reset the countdown time
+  document.querySelector('.time span b').textContent = timeLeft;
 
   timerInterval = setInterval(() => {
-    const elapsedTime = Math.floor((Date.now() - startTime) / 1000); // Calculate elapsed time in seconds
-    document.querySelector('.time span b').textContent = elapsedTime;
+    timeLeft--; // Decrement the countdown time
+    document.querySelector('.time span b').textContent = timeLeft;
+
+  
+
+    if (timeLeft <= 0) {
+      stopTimer();
+      showModal("Time's up! Try again."); // Show the modal with a message when time runs out
+    }
   }, 1000); // Update the timer every second
 }
 
@@ -139,13 +153,13 @@ function resetFlipCount() {
 // Function to reset the timer
 function resetTimer() {
   clearInterval(timerInterval); // Stop the timer
-  startTime = null;
-  document.querySelector('.time span b').textContent = '0';
+  timerInterval = null;
+  document.querySelector('.time span b').textContent = initialTime;
 }
 
-//some help from GPT  
-// Function to show the modal
-function showModal() {
+// Function to show the modal with a message
+function showModal(message) {
+  document.getElementById('modalMessage').textContent = message; // Set the modal message
   modal.style.display = "block";
 }
 
