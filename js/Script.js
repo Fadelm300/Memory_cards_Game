@@ -13,7 +13,8 @@ const totalPairs = cards.length / 2; // Total number of pairs
 const initialTime = 60; // Initial countdown time
 let timeLeft = initialTime; // Time left for the countdown
 
-// Modal elements
+// Modal elements 
+//pop Message
 const modal = document.getElementById('winModal');
 const closeModal = document.querySelector('.close');
 const restartButton = document.getElementById('restartButton');
