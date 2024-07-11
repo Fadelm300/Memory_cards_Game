@@ -1,9 +1,12 @@
-# Project Plan -Memory cards Game
+# -Memory cards Game
+![START THE GAME](/img/p0.png)
 
 ## overview
  [memory card match](https://www.petercollingridge.co.uk/blog/mathematics-toys-and-games/memory-game/) 
 The game contains one player or more each player will flip two cards and that will try to match the cards, and the one who will match the most will win , also if it was one player he needs to match the cards all before the time finish  .
 
+## Date: 10/7/2024
+### BY : Fadel Mohammad 
 
 ## user story 
 
@@ -24,58 +27,69 @@ The game contains one player or more each player will flip two cards and that wi
 
 * As a user, I want the option to play again after the game ends so I can try to improve my performance.
 
-## Pseudocode
-
-1-	Variables
-
->// we need to define constant for the cards   
-// we need to define constant for the timetag  
-// we need to define constant for the  fliptag  
-// we need to define constant for the refresh button 
 
 
-2-	Define the app's state variables, but don't assign values to them.
+## START THE GAME 
 
->//max time   
->//time left  
-//flips  
-//matchCards  
-//disable 
-//playing 
-//card 1 , card 2  
->//timer 
-
-3-	Select and save (cache) elements in variables that need to be accessed in the JavaScript code more than once
->//match cards   
-//update the number of flips cards 
-
-4-	Add event listeners - use delegated event listeners to listen to multiple elements with a single listener.
->//flip cards   
-//refresh button 
-
-5-	Invoke the init function used to initialize all state variables.
-
->//timer for in and timer for out  
-//flip cards   
-//match cards  
-
-
-6-	Invoke the primary render function that transfers all state variables to the DOM.
->//timerDisplay   
- //resultMessage           
-//playAgain((restart ))     
-
-7-	Wait for the user to click on a button.
->//card IF the user click on cards will flip it  and match 2 of them if they are same  
-//restart IF the user click on restart will restart the game 
-  
-8-	Wait for the user to click the "Play Again" button.
->//playAgain((restart ))
+![START THE GAME](/img/p0.png)
+ 1. first the player must open `index.html` 
+ 2. To start the game the user clicks on the button (🔥START THE GAME🔥)
+ 3. THE player must click on two cards in turn and try math all cards 
+ 4. The player must finsh match the cards before the time finish 
+ 5. The player must find the shortest path ((least number of click on cards ))
+ 6. If the time finishes the player will see a pop message either for a win or loss
+ 7. if the player wont to reset he can reset throw the pop message or the button at the bottom of page 
 
 
 
 
+![picture 2 ](/img/p2.png)
 
 
 
+![picture 3 ](/img/p3.png)
+
+
+
+![picture 4 ](/img/p4.png)
+* At the bottom  of the page the player will find information about the game and a reset button 
+* also the player will find information about the developer  
+
+
+
+
+## Attributions:
+1. [geeksforgeeks ](https://www.geeksforgeeks.org/design-a-flip-card-effect-using-reactjs/)
+
+2. [boxicons](https://boxicons.com/)
+
+3. [Cards](http://www.freestockphotos.biz/stockphoto/15686)
+
+4. [Memory Game rules](https://www.petercollingridge.co.uk/blog/mathematics-toys-and-games/memory-game/)
+
+4.  [youtube-1](https://www.youtube.com/watch?v=xWdkt6KSirw)
+
+5. [youtube-2](https://www.youtube.com/watch?v=bOjgOOmPGTA) 
+
+6. [youtube-3](https://www.youtube.com/watch?v=bbb9dZotsOc) 
+
+7. [github](https://github.com/topics/memory-card-game)
+
+8. [chatgpt](https://chatgpt.com/) 
+
+9. [mdn](https://developer.mozilla.org/en-US/) 
+
+
+
+
+
+## Technologies Used:
+* HTML
+* CSS
+* JavaScript
+## Next steps:
+1. Add multiplayer functionality
+2. Improve visual and sound effects
+3. Implement difficulty levels
+4. Add a score tracking system
 
