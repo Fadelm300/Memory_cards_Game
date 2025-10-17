@@ -1,13 +1,4 @@
 
-/* steps
-1- * 
-2- body we need to fix the heigt we planing to use and the footer also in the body
-3-fix the contaner 
-4-fix the cards contaner 
-5-fix the front and back for each card 
-6-add 3d transform and edit the speed
-
-*/
 
 * {
   padding: 0;
@@ -23,20 +14,13 @@
 body {
   height: 100vh;
   background-image: linear-gradient(to right top, #9331e0, #793fd9, #6147d1, #4a4cc6, #354eb9, #1f5fc2, #056ec8, #007dcc, #009ee1, #00bfed, #00def1, #5ffbf1);
-/* background-size: cover;
-background-position: center; */
   display: flex;
 flex-direction: column;
 
   overflow: hidden;
 
 }
-/* another way to fix the contaner  */
-/* .contaner{
-  display: flex;
-  flex-direction: column;
-justify-content: center;
-  } */
+
 
 .contaner{
 margin: auto;
@@ -46,22 +30,15 @@ margin: auto;
   width: 80vh;
   height: 80vh;
   margin: auto;
-/* we  */
+
   display: flex;
   flex-wrap: wrap;
   padding: 20px;
-  /* for 3D && transform-style 3d for the card you  flip it  */
-  /* will insert memory card element insid the 3d the 3d space    */
-  /* otherwise will be in 2d and will be flat in the 2d   */
+
   perspective: 1000px;
 
 }
-/*   position: relative;
-beacus we wont to fix the place for the cards we nedd to use   position: relative;
-and   position: absolute; 
-its like the element ask the perent box if thay are positiond box untell thay find the one is position
-if it was position will be reletiv to it 
-*/
+
 .card {
 
   margin: 5px;
@@ -69,20 +46,12 @@ if it was position will be reletiv to it
   transform: scale(1);
   transform-style: preserve-3d;
   transition: transform 0.5s;
-  /*becaus the margen we have overflow on card so we need to calculat the width and height    */
-  /* -_- */
+
   width: calc(25% - 10px);
   height: calc(30% - 10px); 
 }
 
 
-
-/* transform: scale(0.7); */
-/* Click Effect to the card  will be active winever get Click */
-/* transform scale 0.7 of the oreginal  */
-
-/* transition: transform 0.4s; */
-/* make it bit smoother by applying transition to it */
 
 .card:active {
   transform: scale(0.7);
@@ -107,16 +76,12 @@ if it was position will be reletiv to it
 
 }
 
-/* rotateY if we use rotate without y will not work and will rotate the card in 2d  */
 
 
 
 
 
 
-
-
-/* footer */
 .details{
 
   display: flex;
@@ -143,7 +108,6 @@ if it was position will be reletiv to it
 
 
 
-/* button style  */
 
  button:hover{
   color: #ffffffbe;
@@ -161,24 +125,6 @@ if it was position will be reletiv to it
 }
 
 
-/* .cards{
-  width: 60vh;
-  height: 60vh;
-  margin: auto;
-}
-.card .front-card {
-    font-size: 35px;
-}
-.card .back-card {
-    font-size: 35px;
-} */
-
-
-
-
-
-/*  not 100% good need to be fixed  */
-/* media query */
 
 @media screen and (max-width: 700px) {
   .cards{
@@ -246,39 +192,6 @@ if it was position will be reletiv to it
 
 
 
-/* .shake : we can use it to till the (user) the cards different 
-I didn't add it to js*/
-/* 
-.card.shake{
-  animation: shake 0.35s ease-in-out;
-}
-
-@keyframes shake{
-  0%, 100%{
-      transform: translateX(0);
-  }
-  20%{
-      transform: translateX(-10px);
-  }
-  40%{
-      transform: translateX(10px);
-  }
-  60%{
-      transform: translateX(-5px);
-  }
-  80%{
-      transform: translateX(5px);
-  }
-} */
-
-
-
-
-
-
-
-
-/* //footer */
 
 footer{
 
@@ -321,8 +234,7 @@ padding-top: 0px;
 
 
 
-/* Modal styles */
-/* some help from GPT  */
+
 .modal {
   display: none;
   position: fixed;
@@ -330,10 +242,10 @@ padding-top: 0px;
   z-index: 1;
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgba(0, 0, 0, 0.4); /* Black with opacity */
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgba(0, 0, 0, 0.4); 
 }
 .modal-content {
   display: flex;
@@ -348,7 +260,7 @@ padding-top: 0px;
   
   
   border: 1px solid #888;
-  width: 80%; /*  depending on screen size */
+  width: 80%; 
   max-width: 500px;
   position: absolute;
   top: 50%;
